@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { PeoplesService } from 'src/app/services/peoples.service';
-import { People } from 'src/app/models/people';
+import { Component, OnInit, Input } from '@angular/core';
+import { PeoplesService } from '../services/peoples.service';
+import { People } from '../models/people';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  selector: 'app-people',
+  templateUrl: './people.page.html',
+  styleUrls: ['./people.page.scss'],
 })
-export class Tab3Page implements OnInit {
+export class PeoplePage implements OnInit {
+
   public searchText: string;
   public peoples: Array<People> = new Array<People>();
 

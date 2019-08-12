@@ -1,14 +1,15 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-title>
-            Tab Personas
-        </ion-title>
+    <ion-toolbar color="primary">
+        <ion-title>Personas</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
     <ion-item>
         <ion-input [(ngModel)]="searchText" placeholder="Buscar"></ion-input>
+        <ion-button (click)="addPeople()">
+            <ion-icon slot="icon-only" name="contact"></ion-icon>
+        </ion-button>
     </ion-item>
 
     <ion-card *ngFor="let people of peoples | search : searchText; let i = index">
